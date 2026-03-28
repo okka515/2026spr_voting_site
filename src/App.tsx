@@ -159,7 +159,7 @@ const App: React.FC = () => {
       </section>
       <footer className="bg-[#2E2E2E] text-white py-4">
         <div className="text-center text-sm">
-          <span className="mr-1">ⓒ</span>2025 meijo camp
+          <span className="mr-1">ⓒ</span>2026 meijo camp
         </div>
       </footer>
     </div>
