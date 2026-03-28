@@ -27,7 +27,7 @@ const FirstSection: React.FC = () => {
             <img
               src={top_left}
               alt="Top Left"
-              className="w-full object-contain opacity-0 scale-[2.2] -translate-x-20 -translate-y-8"
+              className="w-full object-contain opacity-0 scale-[2.2] -translate-x-[5vw] -translate-y-[2vw]"
               style={{
                 animation: "fadeInUp 0.5s forwards",
                 animationDelay: "1000ms",
@@ -52,7 +52,7 @@ const FirstSection: React.FC = () => {
             <img
               src={top_right}
               alt="Top Right"
-              className="w-full object-contain opacity-0 scale-[2.2] translate-x-20 -translate-y-24"
+              className="w-full object-contain opacity-0 scale-[2.2] translate-x-[5vw] -translate-y-[6vw]"
               style={{
                 animation: "fadeInUp 0.5s forwards",
                 animationDelay: "1200ms",
