@@ -1,8 +1,8 @@
 import React from "react";
 import { mentors } from "../data/mentors";
-import top_left from "../assets/Spring_Meijo.svg";
+import top_left from "../assets/key_left.svg";
 import top_right from "../assets/key_right.svg";
-import top_background from "../assets/no_logo_2048x1159_stretched.png";
+import top_background from "../assets/key_visual.png";
 
 const sortedMentors = [...mentors].sort((a, b) => a.id - b.id);
 
@@ -60,9 +60,9 @@ const FirstSection: React.FC = () => {
             />
           </div>
 
-          {/* Row 1: col-span-8 で flex 中央揃え */}
-          <div className="col-span-8 flex justify-center items-start">
-            {sortedMentors.slice(4, 12).map((mentor, i) => {
+          {/* Row 1: 残り全員を1行で中央揃え */}
+          <div className="col-span-8 flex flex-nowrap justify-center items-start">
+            {sortedMentors.slice(4).map((mentor, i) => {
               const cellIndex = 8 + i;
               return (
                 <img
@@ -78,22 +78,6 @@ const FirstSection: React.FC = () => {
               );
             })}
           </div>
-          {/* Row 2: 8セル分、sortedMentors のインデックス 12～19 */}
-          {sortedMentors.slice(12, 20).map((mentor, i) => {
-            const cellIndex = 16 + i; // row2 の先頭は 16 番目
-            return (
-              <img
-                key={`r2c${mentor.id}`}
-                src={getImageSrc(mentor)}
-                alt={mentor.img}
-                className="w-full object-cover opacity-0"
-                style={{
-                  animation: "fadeInUp 0.5s forwards",
-                  animationDelay: `${cellIndex * 50}ms`,
-                }}
-              />
-            );
-          })}
         </div>
       </div>
     </section>
