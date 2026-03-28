@@ -1,7 +1,7 @@
 import React from "react";
 import { mentors } from "../data/mentors";
 import top_left from "../assets/key_left.svg";
-import top_right from "../assets/key_right.svg";
+import top_right from "../assets/Gemini_Generated_Image_h8s2cah8s2cah8s2.png";
 import top_background from "../assets/key_visual.png";
 
 const sortedMentors = [...mentors].sort((a, b) => a.id - b.id);
@@ -17,17 +17,17 @@ const FirstSection: React.FC = () => {
       : `/assets/mentors/${mentor.img}`;
 
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <img src={top_background} alt="Key Visual" className="w-full" />
       <div className="absolute inset-0 flex items-start justify-center pointer-events-none">
-        <div className="grid grid-cols-8 grid-rows-3 transform scale-65 mt-[2%]">
+        <div className="grid grid-cols-8 grid-rows-3 transform scale-80 mt-[2%]">
           {/* Row 0 */}
           {/* 左側: top_left（2列分） */}
           <div className="col-span-2 flex items-start">
             <img
               src={top_left}
               alt="Top Left"
-              className="w-full object-contain opacity-0 scale-200 -translate-x-40 -translate-y-8"
+              className="w-full object-contain opacity-0 scale-[2.2] -translate-x-20 -translate-y-8"
               style={{
                 animation: "fadeInUp 0.5s forwards",
                 animationDelay: "1000ms",
@@ -52,7 +52,7 @@ const FirstSection: React.FC = () => {
             <img
               src={top_right}
               alt="Top Right"
-              className="w-full object-contain opacity-0 scale-225 translate-x-40 -translate-y-24"
+              className="w-full object-contain opacity-0 scale-[2.2] translate-x-20 -translate-y-24"
               style={{
                 animation: "fadeInUp 0.5s forwards",
                 animationDelay: "1200ms",
